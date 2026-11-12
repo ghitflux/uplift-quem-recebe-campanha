@@ -1,0 +1,2 @@
+# A base é conferida por hash em scripts/baixar_dados.py: o git não pode trocar o fim de linha dela.
+data/*.csv -text

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Ambiente (uv usa .venv; o uv.lock é versionado de propósito)
+.venv/
+
+# Dados brutos grandes ficariam aqui, fora do git. A base deste estudo tem 4 MB e é versionada em data/.
+data/brutos/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testes
+.pytest_cache/
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Segredos
+.env
+.env.*
