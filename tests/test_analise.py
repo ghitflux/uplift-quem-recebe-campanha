@@ -188,6 +188,37 @@ def test_numeros_do_site_seguem_o_formato_de_cada_idioma():
     assert len(pontos) == 51 and pontos[0] == [0.0, 0.0] and pontos[-1] == [1.0, 45.0]
 
 
+def test_validador_de_grafico_aceita_o_certo_e_aponta_o_errado():
+    texto = {"pt": "a", "en": "b", "es": "c"}
+    certo = {
+        "tipo": "barras", "titulo": texto, "eixo_x": texto, "eixo_y": texto, "leitura": texto, "formato_x": "numero", "formato_y": "percentual",
+        "series": [{"nome": texto, "papel": "principal", "pontos": [["x", 0.1], ["y", 0.2]], "rotulos": {"pt": ["x", "y"], "en": ["x", "y"], "es": ["x", "y"]}}],
+    }
+    assert site.problemas_do_grafico(certo) == []
+    sem_leitura = {k: v for k, v in certo.items() if k != "leitura"}
+    assert any("leitura" in e for e in site.problemas_do_grafico(sem_leitura))
+    assert site.problemas_do_grafico({**certo, "tipo": "pizza"})
+    assert site.problemas_do_grafico({**certo, "faixa": {"serie": 0, "inferior": [], "superior": []}})
+    assert site.problemas_do_grafico({**certo, "titulo": {**texto, "pt": "x" * 91}})
+    muitas = {**certo, "series": [certo["series"][0]] * 5}
+    assert site.problemas_do_grafico(muitas)
+
+
+def test_graficos_extras_do_resultados_json_seguem_as_regras_do_site():
+    import json
+    from pathlib import Path
+
+    caminho = Path(__file__).resolve().parents[1] / "reports" / "resultados.json"
+    if not caminho.exists():
+        pytest.skip("reports/resultados.json ainda não foi gerado")
+    bloco = json.loads(caminho.read_text(encoding="utf-8"))["para_o_site"]
+    assert site.problemas_do_grafico(bloco["grafico"], extra=False) == []
+    extras = bloco["graficos_extras"]
+    assert 3 <= len(extras) <= 5
+    for spec in extras:
+        assert site.problemas_do_grafico(spec) == [], spec["titulo"]["pt"]
+
+
 def test_nome_do_escore():
     assert analise.nome_do_escore("dois_modelos|logistica") == "Dois modelos (T-learner) · regressão logística"
     assert analise.nome_do_escore(analise.REGRA_LINHA, "E-mail feminino") == "Regra: quem já comprou a linha feminina"

@@ -12933,6 +12933,1838 @@
           ]
         ]
       }
-    }
+    },
+    "graficos_extras": [
+      {
+        "tipo": "barras",
+        "titulo": {
+          "pt": "Os métodos de uplift empatam entre si, e a regra de uma variável chega junto",
+          "en": "The uplift methods tie with each other, and a one-variable rule keeps up",
+          "es": "Los métodos de uplift empatan entre sí y una regla de una variable llega igual"
+        },
+        "eixo_x": {
+          "pt": "jeito de escolher quem recebe",
+          "en": "targeting approach",
+          "es": "forma de elegir a quién enviar"
+        },
+        "eixo_y": {
+          "pt": "coeficiente Qini (visitas por mil clientes)",
+          "en": "Qini coefficient (visits per thousand customers)",
+          "es": "coeficiente Qini (visitas por mil clientes)"
+        },
+        "formato_x": "numero",
+        "formato_y": "numero",
+        "series": [
+          {
+            "nome": {
+              "pt": "E-mail feminino",
+              "en": "Women's e-mail",
+              "es": "E-mail femenino"
+            },
+            "papel": "principal",
+            "pontos": [
+              [
+                "T-learner",
+                9.12
+              ],
+              [
+                "Transformação de classe",
+                9.34
+              ],
+              [
+                "S-learner",
+                9.1
+              ],
+              [
+                "X-learner",
+                8.69
+              ],
+              [
+                "Resposta (logística)",
+                4.47
+              ],
+              [
+                "Resposta (LightGBM)",
+                3.84
+              ],
+              [
+                "Regra: já comprou a linha",
+                9.04
+              ],
+              [
+                "Regra: recência",
+                -1.45
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "T-learner",
+                "Transformação de classe",
+                "S-learner",
+                "X-learner",
+                "Resposta (logística)",
+                "Resposta (LightGBM)",
+                "Regra: já comprou a linha",
+                "Regra: recência"
+              ],
+              "en": [
+                "T-learner",
+                "Class transformation",
+                "S-learner",
+                "X-learner",
+                "Response (logistic)",
+                "Response (LightGBM)",
+                "Rule: bought the line before",
+                "Rule: recency"
+              ],
+              "es": [
+                "T-learner",
+                "Transformación de clase",
+                "S-learner",
+                "X-learner",
+                "Respuesta (logística)",
+                "Respuesta (LightGBM)",
+                "Regla: ya compró la línea",
+                "Regla: recencia"
+              ]
+            }
+          },
+          {
+            "nome": {
+              "pt": "E-mail masculino",
+              "en": "Men's e-mail",
+              "es": "E-mail masculino"
+            },
+            "papel": "neutro",
+            "pontos": [
+              [
+                "T-learner",
+                1.6
+              ],
+              [
+                "Transformação de classe",
+                1.7
+              ],
+              [
+                "S-learner",
+                1.72
+              ],
+              [
+                "X-learner",
+                1.5
+              ],
+              [
+                "Resposta (logística)",
+                1.73
+              ],
+              [
+                "Resposta (LightGBM)",
+                1.42
+              ],
+              [
+                "Regra: já comprou a linha",
+                1.14
+              ],
+              [
+                "Regra: recência",
+                1.7
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "T-learner",
+                "Transformação de classe",
+                "S-learner",
+                "X-learner",
+                "Resposta (logística)",
+                "Resposta (LightGBM)",
+                "Regra: já comprou a linha",
+                "Regra: recência"
+              ],
+              "en": [
+                "T-learner",
+                "Class transformation",
+                "S-learner",
+                "X-learner",
+                "Response (logistic)",
+                "Response (LightGBM)",
+                "Rule: bought the line before",
+                "Rule: recency"
+              ],
+              "es": [
+                "T-learner",
+                "Transformación de clase",
+                "S-learner",
+                "X-learner",
+                "Respuesta (logística)",
+                "Respuesta (LightGBM)",
+                "Regla: ya compró la línea",
+                "Regla: recencia"
+              ]
+            }
+          }
+        ],
+        "leitura": {
+          "pt": "Qini na metade de teste (zero = escolher ao acaso). No e-mail feminino a regra fica em 9,0 e o modelo em 9,1, o dobro do modelo de resposta; no masculino tudo fica dentro do ruído.",
+          "en": "Qini on the held-out half (zero = random targeting). For the women's e-mail the rule scores 9.0 and the model 9.1, twice the response model; for the men's e-mail everything sits within the noise.",
+          "es": "Qini en la mitad de prueba (cero = elegir al azar). En el e-mail femenino la regla queda en 9,0 y el modelo en 9,1, el doble del modelo de respuesta; en el masculino todo queda dentro del ruido."
+        }
+      },
+      {
+        "tipo": "barras",
+        "titulo": {
+          "pt": "O modelo de resposta escolhe quem já visitaria; o de uplift, quem muda com o e-mail",
+          "en": "The response model picks people who'd visit anyway; uplift picks those the e-mail moves",
+          "es": "El modelo de respuesta elige a quien ya visitaría; el de uplift, a quien el e-mail mueve"
+        },
+        "eixo_x": {
+          "pt": "público escolhido (e-mail feminino)",
+          "en": "audience selected (women's e-mail)",
+          "es": "público elegido (e-mail femenino)"
+        },
+        "eixo_y": {
+          "pt": "clientes que visitaram o site",
+          "en": "customers who visited the site",
+          "es": "clientes que visitaron el sitio"
+        },
+        "formato_x": "numero",
+        "formato_y": "percentual",
+        "series": [
+          {
+            "nome": {
+              "pt": "Sem e-mail",
+              "en": "Without e-mail",
+              "es": "Sin e-mail"
+            },
+            "papel": "neutro",
+            "pontos": [
+              [
+                "Base inteira",
+                0.1062
+              ],
+              [
+                "Modelo de resposta (50%)",
+                0.1436
+              ],
+              [
+                "Modelo de uplift (50%)",
+                0.105
+              ],
+              [
+                "Regra: já comprou a linha feminina",
+                0.1098
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "Base inteira",
+                "Modelo de resposta (50%)",
+                "Modelo de uplift (50%)",
+                "Regra: já comprou a linha feminina"
+              ],
+              "en": [
+                "Whole list",
+                "Response model (top 50%)",
+                "Uplift model (top 50%)",
+                "Rule: bought women's line before"
+              ],
+              "es": [
+                "Toda la base",
+                "Modelo de respuesta (50%)",
+                "Modelo de uplift (50%)",
+                "Regla: ya compró la línea femenina"
+              ]
+            }
+          },
+          {
+            "nome": {
+              "pt": "Com e-mail",
+              "en": "With e-mail",
+              "es": "Con e-mail"
+            },
+            "papel": "principal",
+            "pontos": [
+              [
+                "Base inteira",
+                0.1513
+              ],
+              [
+                "Modelo de resposta (50%)",
+                0.2007
+              ],
+              [
+                "Modelo de uplift (50%)",
+                0.1852
+              ],
+              [
+                "Regra: já comprou a linha feminina",
+                0.1875
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "Base inteira",
+                "Modelo de resposta (50%)",
+                "Modelo de uplift (50%)",
+                "Regra: já comprou a linha feminina"
+              ],
+              "en": [
+                "Whole list",
+                "Response model (top 50%)",
+                "Uplift model (top 50%)",
+                "Rule: bought women's line before"
+              ],
+              "es": [
+                "Toda la base",
+                "Modelo de respuesta (50%)",
+                "Modelo de uplift (50%)",
+                "Regla: ya compró la línea femenina"
+              ]
+            }
+          }
+        ],
+        "leitura": {
+          "pt": "Sem e-mail, já visitam 14,4% dos escolhidos pelo modelo de resposta e 10,5% dos escolhidos pelo de uplift; o e-mail soma 5,7 e 8,0 pontos.",
+          "en": "Without the e-mail, 14.4% of the response model's picks visit anyway, against 10.5% of the uplift model's; the e-mail adds 5.7 and 8.0 points.",
+          "es": "Sin e-mail ya visitan el 14,4% de los elegidos por el modelo de respuesta y el 10,5% de los elegidos por el de uplift; el e-mail suma 5,7 y 8,0 puntos."
+        }
+      },
+      {
+        "tipo": "linhas",
+        "titulo": {
+          "pt": "No e-mail masculino, nenhuma escolha bate o sorteio: o certo é mandar para todos",
+          "en": "For the men's e-mail no targeting beats random: send it to everyone",
+          "es": "En el e-mail masculino ninguna selección supera al azar: lo correcto es enviar a todos"
+        },
+        "eixo_x": {
+          "pt": "parte da base que recebe o e-mail (maior escore primeiro)",
+          "en": "share of the list that gets the e-mail (highest score first)",
+          "es": "parte de la base que recibe el e-mail (mayor puntuación primero)"
+        },
+        "eixo_y": {
+          "pt": "visitas incrementais por mil clientes",
+          "en": "incremental visits per thousand customers",
+          "es": "visitas incrementales por mil clientes"
+        },
+        "formato_x": "percentual",
+        "formato_y": "numero",
+        "series": [
+          {
+            "nome": {
+              "pt": "Modelo de uplift",
+              "en": "Uplift model",
+              "es": "Modelo de uplift"
+            },
+            "papel": "principal",
+            "pontos": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.02,
+                0.69
+              ],
+              [
+                0.04,
+                3.02
+              ],
+              [
+                0.06,
+                6.55
+              ],
+              [
+                0.08,
+                9.96
+              ],
+              [
+                0.1,
+                11.63
+              ],
+              [
+                0.12,
+                13.99
+              ],
+              [
+                0.14,
+                14.55
+              ],
+              [
+                0.16,
+                15.9
+              ],
+              [
+                0.18,
+                17.19
+              ],
+              [
+                0.2,
+                17.88
+              ],
+              [
+                0.22,
+                18.81
+              ],
+              [
+                0.24,
+                20.18
+              ],
+              [
+                0.26,
+                22.09
+              ],
+              [
+                0.28,
+                23.69
+              ],
+              [
+                0.3,
+                25.16
+              ],
+              [
+                0.32,
+                26.28
+              ],
+              [
+                0.34,
+                27.89
+              ],
+              [
+                0.36,
+                28.92
+              ],
+              [
+                0.38,
+                30.22
+              ],
+              [
+                0.4,
+                31.39
+              ],
+              [
+                0.42,
+                32.78
+              ],
+              [
+                0.44,
+                34.87
+              ],
+              [
+                0.46,
+                36.34
+              ],
+              [
+                0.48,
+                37.5
+              ],
+              [
+                0.5,
+                38.06
+              ],
+              [
+                0.52,
+                39.52
+              ],
+              [
+                0.54,
+                42.4
+              ],
+              [
+                0.56,
+                44.78
+              ],
+              [
+                0.58,
+                47.56
+              ],
+              [
+                0.6,
+                49.4
+              ],
+              [
+                0.62,
+                50.26
+              ],
+              [
+                0.64,
+                51.35
+              ],
+              [
+                0.66,
+                51.9
+              ],
+              [
+                0.68,
+                53.96
+              ],
+              [
+                0.7,
+                55.42
+              ],
+              [
+                0.72,
+                56.43
+              ],
+              [
+                0.74,
+                58.33
+              ],
+              [
+                0.76,
+                59.75
+              ],
+              [
+                0.78,
+                61.73
+              ],
+              [
+                0.8,
+                63.09
+              ],
+              [
+                0.82,
+                65.44
+              ],
+              [
+                0.84,
+                65.78
+              ],
+              [
+                0.86,
+                66.57
+              ],
+              [
+                0.88,
+                67.65
+              ],
+              [
+                0.9,
+                68.85
+              ],
+              [
+                0.92,
+                70.43
+              ],
+              [
+                0.94,
+                71.77
+              ],
+              [
+                0.96,
+                72.81
+              ],
+              [
+                0.98,
+                74.65
+              ],
+              [
+                1.0,
+                76.67
+              ]
+            ]
+          },
+          {
+            "nome": {
+              "pt": "Modelo de resposta",
+              "en": "Response model",
+              "es": "Modelo de respuesta"
+            },
+            "papel": "base",
+            "pontos": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.02,
+                1.79
+              ],
+              [
+                0.04,
+                3.33
+              ],
+              [
+                0.06,
+                5.09
+              ],
+              [
+                0.08,
+                7.79
+              ],
+              [
+                0.1,
+                10.42
+              ],
+              [
+                0.12,
+                13.37
+              ],
+              [
+                0.14,
+                14.47
+              ],
+              [
+                0.16,
+                14.74
+              ],
+              [
+                0.18,
+                17.12
+              ],
+              [
+                0.2,
+                17.83
+              ],
+              [
+                0.22,
+                19.32
+              ],
+              [
+                0.24,
+                21.4
+              ],
+              [
+                0.26,
+                22.34
+              ],
+              [
+                0.28,
+                24.14
+              ],
+              [
+                0.3,
+                24.82
+              ],
+              [
+                0.32,
+                26.21
+              ],
+              [
+                0.34,
+                27.62
+              ],
+              [
+                0.36,
+                28.98
+              ],
+              [
+                0.38,
+                31.07
+              ],
+              [
+                0.4,
+                32.69
+              ],
+              [
+                0.42,
+                34.26
+              ],
+              [
+                0.44,
+                35.77
+              ],
+              [
+                0.46,
+                36.96
+              ],
+              [
+                0.48,
+                38.24
+              ],
+              [
+                0.5,
+                40.12
+              ],
+              [
+                0.52,
+                41.72
+              ],
+              [
+                0.54,
+                42.33
+              ],
+              [
+                0.56,
+                44.34
+              ],
+              [
+                0.58,
+                46.78
+              ],
+              [
+                0.6,
+                47.84
+              ],
+              [
+                0.62,
+                48.57
+              ],
+              [
+                0.64,
+                50.3
+              ],
+              [
+                0.66,
+                52.19
+              ],
+              [
+                0.68,
+                53.98
+              ],
+              [
+                0.7,
+                55.32
+              ],
+              [
+                0.72,
+                56.93
+              ],
+              [
+                0.74,
+                58.9
+              ],
+              [
+                0.76,
+                60.83
+              ],
+              [
+                0.78,
+                62.15
+              ],
+              [
+                0.8,
+                63.27
+              ],
+              [
+                0.82,
+                64.65
+              ],
+              [
+                0.84,
+                65.81
+              ],
+              [
+                0.86,
+                67.32
+              ],
+              [
+                0.88,
+                68.64
+              ],
+              [
+                0.9,
+                70.0
+              ],
+              [
+                0.92,
+                71.04
+              ],
+              [
+                0.94,
+                72.51
+              ],
+              [
+                0.96,
+                74.33
+              ],
+              [
+                0.98,
+                75.62
+              ],
+              [
+                1.0,
+                76.67
+              ]
+            ]
+          },
+          {
+            "nome": {
+              "pt": "Regra: já comprou a linha masculina",
+              "en": "Rule: bought the men's line before",
+              "es": "Regla: ya compró la línea masculina"
+            },
+            "papel": "alternativa",
+            "pontos": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.02,
+                1.62
+              ],
+              [
+                0.04,
+                3.23
+              ],
+              [
+                0.06,
+                4.85
+              ],
+              [
+                0.08,
+                6.46
+              ],
+              [
+                0.1,
+                8.08
+              ],
+              [
+                0.12,
+                9.69
+              ],
+              [
+                0.14,
+                11.31
+              ],
+              [
+                0.16,
+                12.92
+              ],
+              [
+                0.18,
+                14.54
+              ],
+              [
+                0.2,
+                16.16
+              ],
+              [
+                0.22,
+                17.77
+              ],
+              [
+                0.24,
+                19.39
+              ],
+              [
+                0.26,
+                21.0
+              ],
+              [
+                0.28,
+                22.62
+              ],
+              [
+                0.3,
+                24.23
+              ],
+              [
+                0.32,
+                25.85
+              ],
+              [
+                0.34,
+                27.47
+              ],
+              [
+                0.36,
+                29.08
+              ],
+              [
+                0.38,
+                30.7
+              ],
+              [
+                0.4,
+                32.31
+              ],
+              [
+                0.42,
+                33.93
+              ],
+              [
+                0.44,
+                35.54
+              ],
+              [
+                0.46,
+                37.16
+              ],
+              [
+                0.48,
+                38.77
+              ],
+              [
+                0.5,
+                40.39
+              ],
+              [
+                0.52,
+                42.01
+              ],
+              [
+                0.54,
+                43.62
+              ],
+              [
+                0.56,
+                45.18
+              ],
+              [
+                0.58,
+                46.61
+              ],
+              [
+                0.6,
+                48.04
+              ],
+              [
+                0.62,
+                49.47
+              ],
+              [
+                0.64,
+                50.9
+              ],
+              [
+                0.66,
+                52.34
+              ],
+              [
+                0.68,
+                53.77
+              ],
+              [
+                0.7,
+                55.2
+              ],
+              [
+                0.72,
+                56.63
+              ],
+              [
+                0.74,
+                58.06
+              ],
+              [
+                0.76,
+                59.49
+              ],
+              [
+                0.78,
+                60.93
+              ],
+              [
+                0.8,
+                62.36
+              ],
+              [
+                0.82,
+                63.79
+              ],
+              [
+                0.84,
+                65.22
+              ],
+              [
+                0.86,
+                66.65
+              ],
+              [
+                0.88,
+                68.08
+              ],
+              [
+                0.9,
+                69.52
+              ],
+              [
+                0.92,
+                70.95
+              ],
+              [
+                0.94,
+                72.38
+              ],
+              [
+                0.96,
+                73.81
+              ],
+              [
+                0.98,
+                75.24
+              ],
+              [
+                1.0,
+                76.67
+              ]
+            ]
+          },
+          {
+            "nome": {
+              "pt": "Ao acaso",
+              "en": "Random targeting",
+              "es": "Al azar"
+            },
+            "papel": "neutro",
+            "pontos": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.02,
+                1.53
+              ],
+              [
+                0.04,
+                3.07
+              ],
+              [
+                0.06,
+                4.6
+              ],
+              [
+                0.08,
+                6.13
+              ],
+              [
+                0.1,
+                7.67
+              ],
+              [
+                0.12,
+                9.2
+              ],
+              [
+                0.14,
+                10.73
+              ],
+              [
+                0.16,
+                12.27
+              ],
+              [
+                0.18,
+                13.8
+              ],
+              [
+                0.2,
+                15.33
+              ],
+              [
+                0.22,
+                16.87
+              ],
+              [
+                0.24,
+                18.4
+              ],
+              [
+                0.26,
+                19.94
+              ],
+              [
+                0.28,
+                21.47
+              ],
+              [
+                0.3,
+                23.0
+              ],
+              [
+                0.32,
+                24.54
+              ],
+              [
+                0.34,
+                26.07
+              ],
+              [
+                0.36,
+                27.6
+              ],
+              [
+                0.38,
+                29.14
+              ],
+              [
+                0.4,
+                30.67
+              ],
+              [
+                0.42,
+                32.2
+              ],
+              [
+                0.44,
+                33.74
+              ],
+              [
+                0.46,
+                35.27
+              ],
+              [
+                0.48,
+                36.8
+              ],
+              [
+                0.5,
+                38.34
+              ],
+              [
+                0.52,
+                39.87
+              ],
+              [
+                0.54,
+                41.4
+              ],
+              [
+                0.56,
+                42.94
+              ],
+              [
+                0.58,
+                44.47
+              ],
+              [
+                0.6,
+                46.0
+              ],
+              [
+                0.62,
+                47.54
+              ],
+              [
+                0.64,
+                49.07
+              ],
+              [
+                0.66,
+                50.61
+              ],
+              [
+                0.68,
+                52.14
+              ],
+              [
+                0.7,
+                53.67
+              ],
+              [
+                0.72,
+                55.21
+              ],
+              [
+                0.74,
+                56.74
+              ],
+              [
+                0.76,
+                58.27
+              ],
+              [
+                0.78,
+                59.81
+              ],
+              [
+                0.8,
+                61.34
+              ],
+              [
+                0.82,
+                62.87
+              ],
+              [
+                0.84,
+                64.41
+              ],
+              [
+                0.86,
+                65.94
+              ],
+              [
+                0.88,
+                67.47
+              ],
+              [
+                0.9,
+                69.01
+              ],
+              [
+                0.92,
+                70.54
+              ],
+              [
+                0.94,
+                72.07
+              ],
+              [
+                0.96,
+                73.61
+              ],
+              [
+                0.98,
+                75.14
+              ],
+              [
+                1.0,
+                76.67
+              ]
+            ]
+          }
+        ],
+        "faixa": {
+          "serie": 0,
+          "inferior": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.02,
+              -1.31
+            ],
+            [
+              0.04,
+              0.67
+            ],
+            [
+              0.06,
+              3.52
+            ],
+            [
+              0.08,
+              6.72
+            ],
+            [
+              0.1,
+              7.9
+            ],
+            [
+              0.12,
+              9.98
+            ],
+            [
+              0.14,
+              10.54
+            ],
+            [
+              0.16,
+              11.3
+            ],
+            [
+              0.18,
+              12.38
+            ],
+            [
+              0.2,
+              12.83
+            ],
+            [
+              0.22,
+              13.42
+            ],
+            [
+              0.24,
+              14.69
+            ],
+            [
+              0.26,
+              16.5
+            ],
+            [
+              0.28,
+              17.96
+            ],
+            [
+              0.3,
+              19.39
+            ],
+            [
+              0.32,
+              19.94
+            ],
+            [
+              0.34,
+              21.7
+            ],
+            [
+              0.36,
+              22.46
+            ],
+            [
+              0.38,
+              23.64
+            ],
+            [
+              0.4,
+              24.85
+            ],
+            [
+              0.42,
+              26.12
+            ],
+            [
+              0.44,
+              27.81
+            ],
+            [
+              0.46,
+              29.47
+            ],
+            [
+              0.48,
+              30.6
+            ],
+            [
+              0.5,
+              31.01
+            ],
+            [
+              0.52,
+              32.17
+            ],
+            [
+              0.54,
+              35.12
+            ],
+            [
+              0.56,
+              37.4
+            ],
+            [
+              0.58,
+              39.85
+            ],
+            [
+              0.6,
+              41.8
+            ],
+            [
+              0.62,
+              42.49
+            ],
+            [
+              0.64,
+              43.44
+            ],
+            [
+              0.66,
+              44.02
+            ],
+            [
+              0.68,
+              45.96
+            ],
+            [
+              0.7,
+              47.11
+            ],
+            [
+              0.72,
+              48.38
+            ],
+            [
+              0.74,
+              49.9
+            ],
+            [
+              0.76,
+              51.2
+            ],
+            [
+              0.78,
+              53.18
+            ],
+            [
+              0.8,
+              54.58
+            ],
+            [
+              0.82,
+              56.66
+            ],
+            [
+              0.84,
+              57.11
+            ],
+            [
+              0.86,
+              57.86
+            ],
+            [
+              0.88,
+              58.69
+            ],
+            [
+              0.9,
+              60.04
+            ],
+            [
+              0.92,
+              61.1
+            ],
+            [
+              0.94,
+              62.53
+            ],
+            [
+              0.96,
+              63.76
+            ],
+            [
+              0.98,
+              65.2
+            ],
+            [
+              1.0,
+              67.28
+            ]
+          ],
+          "superior": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.02,
+              2.53
+            ],
+            [
+              0.04,
+              5.79
+            ],
+            [
+              0.06,
+              9.53
+            ],
+            [
+              0.08,
+              13.3
+            ],
+            [
+              0.1,
+              15.18
+            ],
+            [
+              0.12,
+              17.76
+            ],
+            [
+              0.14,
+              19.17
+            ],
+            [
+              0.16,
+              20.06
+            ],
+            [
+              0.18,
+              21.79
+            ],
+            [
+              0.2,
+              22.55
+            ],
+            [
+              0.22,
+              23.86
+            ],
+            [
+              0.24,
+              25.26
+            ],
+            [
+              0.26,
+              27.66
+            ],
+            [
+              0.28,
+              29.54
+            ],
+            [
+              0.3,
+              30.84
+            ],
+            [
+              0.32,
+              31.99
+            ],
+            [
+              0.34,
+              33.79
+            ],
+            [
+              0.36,
+              35.24
+            ],
+            [
+              0.38,
+              36.57
+            ],
+            [
+              0.4,
+              38.13
+            ],
+            [
+              0.42,
+              39.54
+            ],
+            [
+              0.44,
+              41.61
+            ],
+            [
+              0.46,
+              43.34
+            ],
+            [
+              0.48,
+              44.73
+            ],
+            [
+              0.5,
+              45.47
+            ],
+            [
+              0.52,
+              47.05
+            ],
+            [
+              0.54,
+              49.38
+            ],
+            [
+              0.56,
+              51.86
+            ],
+            [
+              0.58,
+              54.71
+            ],
+            [
+              0.6,
+              56.9
+            ],
+            [
+              0.62,
+              58.04
+            ],
+            [
+              0.64,
+              58.79
+            ],
+            [
+              0.66,
+              59.69
+            ],
+            [
+              0.68,
+              61.54
+            ],
+            [
+              0.7,
+              62.83
+            ],
+            [
+              0.72,
+              64.49
+            ],
+            [
+              0.74,
+              65.97
+            ],
+            [
+              0.76,
+              67.38
+            ],
+            [
+              0.78,
+              69.54
+            ],
+            [
+              0.8,
+              71.01
+            ],
+            [
+              0.82,
+              73.3
+            ],
+            [
+              0.84,
+              73.91
+            ],
+            [
+              0.86,
+              74.81
+            ],
+            [
+              0.88,
+              76.0
+            ],
+            [
+              0.9,
+              77.57
+            ],
+            [
+              0.92,
+              78.62
+            ],
+            [
+              0.94,
+              80.12
+            ],
+            [
+              0.96,
+              81.53
+            ],
+            [
+              0.98,
+              83.22
+            ],
+            [
+              1.0,
+              85.31
+            ]
+          ]
+        },
+        "leitura": {
+          "pt": "As curvas se confundem com a reta do acaso: Qini do modelo de uplift de 1,5 por mil (IC 95% de −1,4 a 4,2). O efeito é parecido em toda a base.",
+          "en": "The curves overlap the random line: uplift model Qini of 1.5 per thousand (95% CI −1.4 to 4.2). The effect is similar across the whole list.",
+          "es": "Las curvas se confunden con la recta del azar: Qini del modelo de uplift de 1,5 por mil (IC 95% de −1,4 a 4,2). El efecto es parecido en toda la base."
+        }
+      },
+      {
+        "tipo": "barras",
+        "titulo": {
+          "pt": "A metade com maior uplift previsto concentra o efeito do e-mail feminino",
+          "en": "The half with the highest predicted uplift holds most of the women's e-mail effect",
+          "es": "La mitad con mayor uplift previsto concentra el efecto del e-mail femenino"
+        },
+        "eixo_x": {
+          "pt": "décimo do teste (1º = maior uplift previsto)",
+          "en": "test-set decile (1st = highest predicted uplift)",
+          "es": "decil de la prueba (1.º = mayor uplift previsto)"
+        },
+        "eixo_y": {
+          "pt": "visitas a mais por cliente (pontos percentuais)",
+          "en": "extra visits per customer (percentage points)",
+          "es": "visitas adicionales por cliente (puntos porcentuales)"
+        },
+        "formato_x": "numero",
+        "formato_y": "percentual",
+        "series": [
+          {
+            "nome": {
+              "pt": "Uplift observado",
+              "en": "Observed uplift",
+              "es": "Uplift observado"
+            },
+            "papel": "principal",
+            "pontos": [
+              [
+                "1º",
+                0.0489
+              ],
+              [
+                "2º",
+                0.0698
+              ],
+              [
+                "3º",
+                0.1006
+              ],
+              [
+                "4º",
+                0.0917
+              ],
+              [
+                "5º",
+                0.0911
+              ],
+              [
+                "6º",
+                0.034
+              ],
+              [
+                "7º",
+                0.0218
+              ],
+              [
+                "8º",
+                -0.0012
+              ],
+              [
+                "9º",
+                0.01
+              ],
+              [
+                "10º",
+                -0.0175
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "1º",
+                "2º",
+                "3º",
+                "4º",
+                "5º",
+                "6º",
+                "7º",
+                "8º",
+                "9º",
+                "10º"
+              ],
+              "en": [
+                "1st",
+                "2nd",
+                "3rd",
+                "4th",
+                "5th",
+                "6th",
+                "7th",
+                "8th",
+                "9th",
+                "10th"
+              ],
+              "es": [
+                "1.º",
+                "2.º",
+                "3.º",
+                "4.º",
+                "5.º",
+                "6.º",
+                "7.º",
+                "8.º",
+                "9.º",
+                "10.º"
+              ]
+            }
+          }
+        ],
+        "leitura": {
+          "pt": "Nos cinco primeiros décimos o e-mail soma em média 8,0 pontos de visita; em 4 décimos o intervalo de 95% inclui o zero.",
+          "en": "In the top five deciles the e-mail adds 8.0 visit points on average; in 4 deciles the 95% interval includes zero.",
+          "es": "En los cinco primeros deciles el e-mail suma en promedio 8,0 puntos de visita; en 4 deciles el intervalo del 95% incluye el cero."
+        }
+      },
+      {
+        "tipo": "barras",
+        "titulo": {
+          "pt": "Os dois e-mails funcionam, mas o efeito em compra é pequeno demais para fatiar a base",
+          "en": "Both e-mails work, but the purchase effect is too small to slice the list",
+          "es": "Los dos e-mails funcionan, pero el efecto en compras es demasiado pequeño para segmentar"
+        },
+        "eixo_x": {
+          "pt": "desfecho nas duas semanas seguintes",
+          "en": "outcome over the following two weeks",
+          "es": "resultado en las dos semanas siguientes"
+        },
+        "eixo_y": {
+          "pt": "diferença contra o grupo sem e-mail",
+          "en": "difference vs. the no-e-mail group",
+          "es": "diferencia frente al grupo sin e-mail"
+        },
+        "formato_x": "numero",
+        "formato_y": "percentual",
+        "series": [
+          {
+            "nome": {
+              "pt": "E-mail feminino",
+              "en": "Women's e-mail",
+              "es": "E-mail femenino"
+            },
+            "papel": "principal",
+            "pontos": [
+              [
+                "Visita ao site",
+                0.04523
+              ],
+              [
+                "Compra",
+                0.00311
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "Visita ao site",
+                "Compra"
+              ],
+              "en": [
+                "Site visit",
+                "Purchase"
+              ],
+              "es": [
+                "Visita al sitio",
+                "Compra"
+              ]
+            }
+          },
+          {
+            "nome": {
+              "pt": "E-mail masculino",
+              "en": "Men's e-mail",
+              "es": "E-mail masculino"
+            },
+            "papel": "alternativa",
+            "pontos": [
+              [
+                "Visita ao site",
+                0.07659
+              ],
+              [
+                "Compra",
+                0.00681
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "Visita ao site",
+                "Compra"
+              ],
+              "en": [
+                "Site visit",
+                "Purchase"
+              ],
+              "es": [
+                "Visita al sitio",
+                "Compra"
+              ]
+            }
+          },
+          {
+            "nome": {
+              "pt": "Mínimo detectável num décimo do teste",
+              "en": "Smallest effect a test decile can detect",
+              "es": "Mínimo detectable en un decil de la prueba"
+            },
+            "papel": "neutro",
+            "pontos": [
+              [
+                "Visita ao site",
+                0.03739
+              ],
+              [
+                "Compra",
+                0.00916
+              ]
+            ],
+            "rotulos": {
+              "pt": [
+                "Visita ao site",
+                "Compra"
+              ],
+              "en": [
+                "Site visit",
+                "Purchase"
+              ],
+              "es": [
+                "Visita al sitio",
+                "Compra"
+              ]
+            }
+          }
+        ],
+        "leitura": {
+          "pt": "Em compra, um décimo da metade de teste só detecta efeitos a partir de 0,92 ponto, mais que o efeito inteiro de qualquer e-mail (0,31 e 0,68); por isso o desfecho principal é a visita.",
+          "en": "On purchases, a tenth of the test half can only detect effects of 0.92 points or more, larger than either e-mail's full effect (0.31 and 0.68); that's why visits are the main outcome.",
+          "es": "En compras, un décimo de la mitad de prueba solo detecta efectos desde 0,92 punto, más que el efecto total de cualquier e-mail (0,31 y 0,68); por eso el resultado principal es la visita."
+        }
+      }
+    ]
   }
 }

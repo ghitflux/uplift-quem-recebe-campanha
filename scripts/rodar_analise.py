@@ -137,7 +137,7 @@ def main() -> None:
         "efeito_medio": _registros(efeitos),
         "poder": poder,
         "campanhas": {campanha: _campanha_para_json(r) for campanha, r in resultados.items()},
-        "para_o_site": site.montar(resultados, efeitos, base),
+        "para_o_site": site.montar(resultados, efeitos, base, poder),
     }
     (SAIDA / "resultados.json").write_text(json.dumps(saida, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
 
